@@ -1,0 +1,146 @@
+#include <iostream>
+using namespace std;
+
+// 1. Структура Point
+struct Point {
+    int x, y;
+};
+void task1() {
+    Point p = { 3, 5 };
+    cout << "Point: x = " << p.x << ", y = " << p.y << endl;
+}
+
+// 2. Структура Student
+struct Student {
+    char name[50];
+    int age;
+    float grade;
+};
+void task2() {
+    Student s;
+    cout << "Введіть ім’я: ";
+    cin.getline(s.name, 50);
+    cout << "Введіть вік: ";
+    cin >> s.age;
+    cout << "Введіть середній бал: ";
+    cin >> s.grade;
+    cin.ignore();
+    cout << "Ім’я: " << s.name << ", Вік: " << s.age << ", Середній бал: " << s.grade << endl;
+}
+
+// 3. Структура Rectangle
+struct Rectangle {
+    int width, height;
+};
+void task3() {
+    Rectangle r = { 4, 7 };
+    int area = r.width * r.height;
+    cout << "Площа прямокутника: " << area << endl;
+}
+
+// 4. Структура Time
+struct Time {
+    int hour, minute, second;
+};
+void task4() {
+    Time t = { 9, 15, 30 };
+    cout << "Час: ";
+    if (t.hour < 10) cout << '0';
+    cout << t.hour << ":";
+    if (t.minute < 10) cout << '0';
+    cout << t.minute << ":";
+    if (t.second < 10) cout << '0';
+    cout << t.second << endl;
+}
+
+// 5. Структура Car
+struct Car {
+    char brand[30];
+    int year;
+    float price;
+};
+void task5() {
+    Car c = { "Toyota", 2020, 25000.5f };
+    cout << "Марка: " << c.brand << ", Рік: " << c.year << ", Ціна: $" << c.price << endl;
+}
+
+// 6. Структура Date
+struct Date {
+    int day, month, year;
+};
+void task6() {
+    Date d = { 5, 6, 2025 };
+    cout << "Дата: ";
+    if (d.day < 10) cout << '0';
+    cout << d.day << ".";
+    if (d.month < 10) cout << '0';
+    cout << d.month << "." << d.year << endl;
+}
+
+// 7. Структура Person
+struct Person {
+    char name[50];
+    int age;
+    float height;
+};
+void task7() {
+    Person p;
+    cout << "Введіть ім’я: ";
+    cin.getline(p.name, 50);
+    cout << "Введіть вік: ";
+    cin >> p.age;
+    cout << "Введіть зріст (м): ";
+    cin >> p.height;
+    cin.ignore();
+    cout << "Ім’я: " << p.name << ", Вік: " << p.age << ", Зріст: " << p.height << " м" << endl;
+}
+
+// 8. Структура Book
+struct Book {
+    char title[50];
+    char author[50];
+    int year;
+};
+void task8() {
+    Book b = { "1984", "George Orwell", 1949 };
+    cout << "Назва: " << b.title << ", Автор: " << b.author << ", Рік: " << b.year << endl;
+}
+
+// 9. Структура Employee
+struct Employee {
+    char name[50];
+    char position[50];
+    float salary;
+};
+void task9() {
+    Employee e = { "Іван Петренко", "Інженер", 15000 };
+    cout << "Ім’я: " << e.name << ", Посада: " << e.position << ", Зарплата: " << e.salary << " грн" << endl;
+}
+
+// 10. Структура Triangle
+struct Triangle {
+    int a, b, c;
+};
+void task10() {
+    Triangle t = { 3, 4, 5 };
+    if (t.a + t.b > t.c && t.a + t.c > t.b && t.b + t.c > t.a)
+        cout << "Можна утворити трикутник." << endl;
+    else
+        cout << "Неможливо утворити трикутник." << endl;
+}
+
+// main лише викликає всі функції
+int main() {
+    setlocale(0, "ru");
+    task1();
+    task2();
+    task3();
+    task4();
+    task5();
+    task6();
+    task7();
+    task8();
+    task9();
+    task10();
+    return 0;
+}
